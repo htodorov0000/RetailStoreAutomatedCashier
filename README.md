@@ -45,6 +45,8 @@ The robot will only move one square at a time in any cardinal direction, and wil
 
 Once it collects items from each relevant aisle and it returns, the number of steps it took is displayed. The products are delivered to the customer and the program closes.
 
+tests.py contains testing data.
+
 ## Implementation Specifics
 
 Implementation for this project did not vary much from the given design document. The main use of OOP principles is within the menu system. This system is built as an experimental Entity Component System, where each item on a menu can be given a component, via passing a function reference and the arguments required. 
