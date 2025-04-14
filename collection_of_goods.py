@@ -134,6 +134,7 @@ def robot_runtime():
     steps, best_path = get_shortest_path(aisle_positions)
     move_robot_along_path(best_path)
     print("Shortest Route = ", str(steps) + " steps.")
-    print("Products dispensed. Have a nice rest of your day.")
+    print("Products dispensed. Have a nice rest of your evening!")
+    input("Press Enter to exit.")
     exit()
     
