@@ -1,1 +1,3 @@
 # RetailStoreAutomatedCashier
+
+## Instructions of Operation
