@@ -41,7 +41,7 @@ Please consult the following legend for the denomination of each character:
 
 6. **A** - Alcoholic Beverages Aisle (Product - White Wine)
 
-The robot will take the shortest possible path. 
+The robot will only move one square at a time in any cardinal direction, and will take the shortest possible path. 
 
 Once it collects items from each relevant aisle and it returns, the number of steps it took is displayed. The products are delivered to the customer and the program closes.
 
