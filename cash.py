@@ -3,7 +3,7 @@ class Cash():
     def __init__(self, value):
         self.value = value
         if self.value < 1:
-            self.name = "c" + str(value * 100)
+            self.name = "c" + str(int(value * 100))
         else:
             self.name = "E" + str(value)
 

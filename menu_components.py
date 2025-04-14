@@ -1,6 +1,7 @@
 from menu_classes import Menu, MenuItem
 from product import Product
 from cash import currency_units
+from collection_of_goods import robot_runtime, request_input_to_continue
 
 total_price = 0
 
@@ -18,10 +19,15 @@ def increment_total_price(amount):
     print("Owed Amount = " + "%.2f" % total_price)
 
 def payment_calculation(amount):
+    global total_price
     if total_price > 0:
         increment_total_price(amount)
     if total_price < 0:
         return_change()
+        total_price = 0
+    if total_price == 0: 
+        robot_runtime()
+        
 
 def return_change():
     """Returns change starting from highest unit."""
@@ -34,8 +40,6 @@ def return_change():
             print("Returned " + unit.name + ".")
             request_input_to_continue()
 
-def request_input_to_continue():
-    input("Press Enter to continue.")
 
 def load_payment_menu(payment_menu):
     if total_price <= 0:
