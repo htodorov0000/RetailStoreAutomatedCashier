@@ -29,18 +29,32 @@ Finally, the user is presented with the randomized grid layout of the store. Her
 
 Please consult the following legend for the denomination of each character:
 
-S - Starting location (The robot starts here and must return to here in order to deliver the collected items)
+1. **S** - Starting location (The robot starts here and must return to here in order to deliver the collected items)
 
-r - Robot
+2. **r** - Robot
 
-M - Meat Aisle (Product - Ground Meat)
+3. **M** - Meat Aisle (Product - Ground Meat)
 
-F - Freezer Aisle (Product - Frozen Pizza)
+4. **F** - Freezer Aisle (Product - Frozen Pizza)
 
-C - Cleaning Aisle (Product - Laundry Detergent)
+5. **C** - Cleaning Aisle (Product - Laundry Detergent)
 
-A - Alcoholic Beverages Aisle (Product - White Wine)
+6. **A** - Alcoholic Beverages Aisle (Product - White Wine)
 
 The robot will take the shortest possible path. 
 
 Once it collects items from each relevant aisle and it returns, the number of steps it took is displayed. The products are delivered to the customer and the program closes.
+
+## Implementation Specifics
+
+Implementation for this project did not vary much from the given design document. The main use of OOP principles is within the menu system. This system is built as an experimental Entity Component System, where each item on a menu can be given a component, via passing a function reference and the arguments required. 
+
+More class-based objects were created than expected. Cash units, menus and menu items, product types and aisles all are objects instantiated from classes.
+
+Outside of the menu system, the implementation of the final phase, during which the robot finds the optimal path to collect the requested products, was the most involved. This implementation did not utilize OOP principles, outside of accessing the existing Aisle and Product classes, as it would not benefit from instanting class objects. 
+
+The pathfinding algorithm was a simple self-made design, making use of permutations to calculate the shortest path from all possible combinations.
+
+## Limitations
+
+The Entity Component Menu System proposed in the design document was used in the making of this program. It was found to be less efficient than expected, as passing functions by reference with less control of their execution caused the need for multiple workarounds, and led to less readable and iterative code. It is unclear if this specific approach of treating functions as components could have been improved on to be more beneficial.
