@@ -14,3 +14,4 @@ __pycache__/product.cpython-311.pyc
 .vs/RetailStoreAutomatedCashier/FileContentIndex/4704e4ff-99ff-4a92-843c-72a61d413cd2.vsidx
 .vs/RetailStoreAutomatedCashier/FileContentIndex/83bd53ff-df5d-4ab6-86be-572988231299.vsidx
 *.vsidx
+/__pycache__
