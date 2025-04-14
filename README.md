@@ -14,6 +14,7 @@ From this screen, products may be chosen. Once a product is selected, a seperate
 ![image](https://github.com/user-attachments/assets/ecbda89a-acb2-40f4-b94f-a885ce2ba2ed)
 
 From here, the user may add as many of the item as they want, by incrementing or decrementing the quantity of the product one at a time. The total quantity will be shown upon doing so. Upon selecting "back", the user may select other items to add to their cart, until they have the amount desired of each product.
+
 After selecting the "To Payment" option, the products' total value is calculated and presented to the user, who may now select which units of cash to insert into the machine using the interface:
 
 ![image](https://github.com/user-attachments/assets/965c3f35-54c6-4ef4-8406-eecefffb7e38)
@@ -29,11 +30,17 @@ Finally, the user is presented with the randomized grid layout of the store. Her
 Please consult the following legend for the denomination of each character:
 
 S - Starting location (The robot starts here and must return to here in order to deliver the collected items)
+
 r - Robot
+
 M - Meat Aisle (Product - Ground Meat)
+
 F - Freezer Aisle (Product - Frozen Pizza)
+
 C - Cleaning Aisle (Product - Laundry Detergent)
+
 A - Alcoholic Beverages Aisle (Product - White Wine)
 
 The robot will take the shortest possible path. 
+
 Once it collects items from each relevant aisle and it returns, the number of steps it took is displayed. The products are delivered to the customer and the program closes.
