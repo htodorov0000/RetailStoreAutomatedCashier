@@ -5,6 +5,7 @@ import menu_components
 
 
 def currency_menu_items():
+    """Make menu items for currency units in Payment Menu."""
     menu_items = []
     for unit in currency_units:
         menu_items.append(MenuItem(unit.name, menu_components.payment_calculation, [unit.value * -1]))
@@ -14,6 +15,7 @@ selection_menu = Menu("Product Selection", "Please select your desired product."
 payment_menu = Menu("Payment", "" , currency_menu_items())
 
 def create_product_selection_menu_items(products: list[Product]):
+    """Menu Items for selecting products."""
     product_menu_items = []
     item_num = 0
     for product in products:
@@ -27,5 +29,6 @@ def create_product_selection_menu_items(products: list[Product]):
     product_menu_items.append(go_to_payment_menu_item)
     selection_menu.items = product_menu_items
 
+#Start:
 create_product_selection_menu_items(products)
 selection_menu.start()

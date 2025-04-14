@@ -3,22 +3,28 @@ from product import Product
 from cash import currency_units
 from collection_of_goods import robot_runtime, request_input_to_continue
 
+"""This module contains function components for MenuItem."""
+
 total_price = 0
 
 def load_menu(menu):
+    """Load existing menu."""
     menu.start()
 
 def start_new_menu(name, description, *items):
+    """Create and load new menu."""
     new_menu = Menu(name, description, items)
     load_menu(new_menu)
     
 def increment_total_price(amount):
+    """Add amount to total_price."""
     global total_price
     total_price += amount
     total_price = round(total_price, 2)
     print("Owed Amount = " + "%.2f" % total_price)
 
 def payment_calculation(amount):
+    """Handle payment and change calculations."""
     global total_price
     if total_price > 0:
         increment_total_price(amount)
@@ -28,7 +34,6 @@ def payment_calculation(amount):
     if total_price == 0: 
         robot_runtime()
         
-
 def return_change():
     """Returns change starting from highest unit."""
     global total_price
@@ -42,6 +47,7 @@ def return_change():
 
 
 def load_payment_menu(payment_menu):
+    """Loads payment menu from previous menu."""
     if total_price <= 0:
         print("No items selected. Please select items to purchase.")
         return
@@ -49,6 +55,7 @@ def load_payment_menu(payment_menu):
     load_menu(payment_menu)
 
 def increment_product_quantity(product, amount):
+    """Increments the quantity of given product in the user's cart."""
     product.quantity += amount
     error = False
     if product.quantity < 0:

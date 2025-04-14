@@ -8,6 +8,7 @@ class Cash():
             self.name = "E" + str(value)
 
 def make_currency():
+    """Creates currency objects for each unit from 1 cent to 100 euros."""
     values = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100]
     units = []
     for value in values:

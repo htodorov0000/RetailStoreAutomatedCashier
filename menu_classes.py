@@ -1,14 +1,9 @@
-from ctypes import Array
-from pyclbr import Function
-
-
-
-
+"""Contains Menu and MenuItem classes."""
 class MenuItem:
     """Objects of this class contain components in the form
     of functions with unique functionality, selectable
     in Menu system."""
-    def __init__(self, name: str, function: Function, args: Array):
+    def __init__(self, name: str, function, args: list):
         self.name = name
         self.function = function
         self.args = args
@@ -43,23 +38,3 @@ class Menu:
                     item.function(*item.args)
             if found_item == False:
                 print("Item not found.")
-
-
-
-#below are example objects and functions:
-
-# def add(a,b):
-#     print(a+b)
-
-# def start_new_menu(*items):
-#     new_menu = Menu(items)
-
-# def no_arg():
-#     print("works")
-
-# item1 = MenuItem("first", add, [2,4]) #6
-# item2 = MenuItem("second", add, [3,6]) #9
-# item3 = MenuItem("new menu", start_new_menu, [["1", item2], ["2", item1]])
-# item4 = MenuItem("no arg function", no_arg, [])
-# start = Menu([["1", item1], ["2", item2], ["3", item3], ["4", item4]])
-

@@ -1,10 +1,12 @@
 class Aisle():
+    """Represents physical aisle at the store."""
     def __init__(self, name: str, char: str):
         self.name = name
-        self.char = char
+        self.char = char #character used for visual representation on grid
         self.position = [-1,-1]
 
 class Product():
+    """Represents real product present at the store."""
     def __init__(self, name:str, price:float, aisle:Aisle):
         self.name = name
         self.quantity = 0
@@ -12,6 +14,7 @@ class Product():
         self.aisle = aisle
 
 def set_aisles_and_products():
+    """Creates each Aisle and Product class object used. More may be added."""
     meat_aisle = Aisle("Meat Aisle", "M")
     freezer_aisle = Aisle("Freezer Aisle", "F")
     cleaning_products_aisle = Aisle("Cleaning Products Aisle", "C")
